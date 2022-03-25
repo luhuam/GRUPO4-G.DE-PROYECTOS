@@ -26,7 +26,7 @@
                 $correo=$_POST['correo'];  
                 $contraseña=$_POST['contraseña'];  
             
-                $con=mysqli_connect('localhost:3307','root','','healthy') or die(mysql_error());  
+                $con=mysqli_connect('localhost','root','','healthy2') or die(mysql_error());  
             
                 $query=mysqli_query($con, "SELECT * FROM usuario WHERE correo='".$correo."' AND contraseña='".$contraseña."'");  
                 $numrows=mysqli_num_rows($query);  
