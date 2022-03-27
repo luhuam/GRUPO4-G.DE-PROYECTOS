@@ -1,0 +1,371 @@
+@charset "utf-8";
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
+*{
+	padding: 0px;
+	margin:0px;
+	box-sizing: border-box;
+    font-family: "Poppins" , sans-serif;
+}
+/*HEADER*/
+header{
+    position: fixed;
+    margin: auto;
+    width: 100%;
+    height: 80px;
+    background: white;
+    border:none;
+    z-index: 2;
+}
+.header-content{
+    max-width: 1200px;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    height: 100%;
+}
+.menu{
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+nav{
+    width:92%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.menu nav ul{
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    list-style: none;
+}
+.menu nav ul li{
+    height: 100%;
+    margin: 0px 20px;
+    font-size: 18px;
+}
+.menu nav ul li:hover{
+    color: #80C88B;
+}
+.menu nav ul button{
+    border: none;
+    border-radius: 20px;
+    padding:5px 20px 5px 20px;
+    height: 40px; 
+    background-color: black; 
+    color: white;
+}
+/*FIN HEADER*/
+.portada-container-cover{
+    width:100%;
+    height: 260px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.portada_info{
+    margin-left: 20px;
+    margin-right: 20px;
+    margin-top: 200px;
+    padding: 20px;
+    width: 1250px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-image: url(../img/r.ejercicios/rec.ejercicios.jpg);
+    border-radius: 30px;
+    opacity:0.8;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.portada_info h1{
+    color:white;
+    font-size: 36px;
+    font-weight: 700;
+}
+/*Contenedor de categorias*/
+input[type="radio"]{
+    display: none;
+}
+.container-category{
+    width: 100%;
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap;
+    margin:auto;
+	justify-content: center;
+	align-items: center;
+}
+.container-category label{
+    height: 54px;
+    border:1px solid #80C88B;
+    color: #80C88B;
+    font-size: 18px;
+    font-weight: 600;
+    padding-top: 13px;
+    padding-left: 60px;
+    padding-right: 60px;
+    margin: 10px;
+    margin-top:30px;
+    background: white;
+    border-radius: 20px;
+    cursor: pointer;
+}
+/*Fin del contenedor*/
+/*Post - Publicaciones*/
+.container-post{
+    max-width: 1280px;
+    margin: auto;
+    margin-top: 100px;
+    margin-bottom: 40px;
+}
+.posts{
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 20px;
+    padding: 20px;
+}
+.posts .post{
+    background: white;
+    border: 1px solid #80C88B;
+    border-radius: 20px;
+    padding-bottom: 20px;
+}
+.post .ctn-img img{
+    width: 100%;
+    height: 197px;
+    border-radius: 20px 20px 0px 0px;
+    pointer-events: none;
+}
+.post h2{
+    font-size: 18px;
+    font-weight: 600;
+    margin-top: 20px;
+    padding: 0px 20px;
+}
+.post span{
+    margin-left:20px;
+    font-size: 16px;
+}
+.ctn-tag{
+    width: 100%;
+    display: flex;
+    margin-left:14px;
+    flex-wrap: wrap;
+}
+
+.ctn-tag li{
+    list-style: none;
+    font-size: 14px;
+    margin: 4px;
+    padding: 6px 10px;
+    background: white;
+    border-radius:20px ;
+    border: 1px solid #80C88B;
+    color: #80C88B;
+    cursor: default;
+    margin-bottom:20px;
+}
+.post a{
+    width: 100%;
+    text-decoration: none;
+}
+.post button{
+    display: flex;
+    margin: auto;
+	justify-content: center;
+	align-items: center;
+    padding: 10px 50px;
+    font-size: 16px;
+    height: 50px;
+    background: #DEFFE3;
+    color: #80C88B;
+    border: none;
+    cursor: pointer;
+    border-radius: 20px;
+    font-weight: 600;
+}
+
+/*Filtrado*/
+
+[value="Todos"]:checked ~ .posts .post[data-category]{
+    display: block;
+}
+
+[value="Ectomorfo"]:checked ~ .posts .post:not([data-category~="Ectomorfo"]),
+[value="Mesomorfo"]:checked ~ .posts .post:not([data-category~="Mesomorfo"]),
+[value="Endomorfo"]:checked ~ .posts .post:not([data-category~="Endomorfo"]){
+    display: none;
+}
+
+[value="Todos"]:checked ~ .container-category [for="Todos"],
+[value="Ectomorfo"]:checked ~ .container-category [for="Ectomorfo"],
+[value="Mesomorfo"]:checked ~ .container-category [for="Mesomorfo"],
+[value="Endomorfo"]:checked ~ .container-category [for="Endomorfo"]{
+    background: #DEFFE3;
+    color: #80C88B;
+    border: none;
+}
+/*Fin filtrado*/
+/*FOOTER*/
+footer{
+    height: 200px;
+    background-color: #DEFFE3;
+    margin:auto;
+    display:flex;
+	justify-content: center;
+	align-items: center;
+    flex-direction: column;
+}
+.footer_datos{
+    width: 92%;
+    display: inline-flex;
+    margin: auto;
+    justify-content: center;
+	align-items: center;
+}
+.footer_datos ul{
+    width: 60%;
+    display: inline-flex;
+    margin: auto;
+    justify-content: center;
+	align-items: center;
+    font-size: 16px;
+    font-weight: 600;
+    list-style: none;
+}
+.footer_datos li{
+    margin-left: 40px;
+}
+.footer_redes{
+    float: right;
+}
+.footer_redes img{
+    margin-right: 10px;
+    margin-left: 10px;
+}
+/*FIN DEL FOOTER*/
+@media screen and (max-width: 1000px){
+    .posts{
+        grid-template-columns: repeat(3, 1fr);
+    }
+    .footer_datos{
+        flex-direction: column;
+        margin: 0;
+        width: 100%;
+    }
+    .footer_datos ul{
+        width: 100%;
+    }
+    .footer_datos li{
+        width: 100%;
+        margin-left: 0px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .portada_info{
+        height: 230px;
+        margin-top: 160px;
+    }
+    .portada_info h1{
+        font-size: 30px;
+    }
+    .container-post{
+        margin-top: 60px;
+    }
+}
+@media screen and (max-width: 900px){
+    .portada_info h1{
+        font-size: 30px;
+    }
+    .portada_info {
+        margin-top: 100px;
+    }
+    .container-post{
+        margin-top: 30px;
+    }
+    .portada-container-cover {
+        height:300px;
+    }
+    .posts{
+        grid-template-columns: repeat(2, 1fr);
+    }
+    footer{
+        height: 200px;
+    }
+    nav ul li{
+        display: none;
+    }
+    .container-category label {
+        margin-top: 10px;
+        height: 50px;
+        font-size: 16px;
+        padding-top: 13px;
+        padding-left: 20px;
+        padding-right: 20px   
+    }
+}
+
+@media screen and (max-width: 580px){
+    nav ul li{
+        display: none;
+    }
+    .portada-container-cover{
+        height: 300px;
+    }
+    .posts{
+        grid-template-columns: repeat(1, 1fr);
+    }
+    .portada_info h1{
+        font-size: 20px;
+            
+     }    
+    .portada_info p{
+        font-size: 15px;
+    }
+    footer{
+        height: 200px;
+    }
+}
+@media screen and (max-width: 450px){
+    .posts{
+        grid-template-columns: repeat(0, 1fr);
+    }
+    nav ul li{
+        display: none;
+    }
+    .footer_datos ul{
+        flex-direction: column;
+        margin: 0;
+        width: 100%;
+    }
+    footer{
+        height: 300px;
+    }
+    .portada_info h1{
+        font-size: 18px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+    }
+    .portada_info {
+        margin-top: 100px;
+        height: 180px;
+    }
+    .container-post{
+        margin-top: 10px;
+    }
+    .portada-container-cover {
+        height:260px;
+    }
+}

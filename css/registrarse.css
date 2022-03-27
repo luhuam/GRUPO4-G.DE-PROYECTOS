@@ -1,0 +1,157 @@
+@charset "utf-8";
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
+*{
+	padding: 0px;
+	margin:0px;
+	box-sizing: border-box;
+    font-family: "Poppins" , sans-serif;
+}
+body{
+    background: #F7F6FB;
+}
+/*HEADER*/
+header{
+    margin:auto;
+    width: 100%;
+    height: 80px;
+    background: white;
+    border: none;
+    z-index: 1;
+}
+.header-content{
+    max-width: 1200px;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    height: 100%;
+}
+.menu {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+nav{
+    width:92%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.menu nav ul{
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    list-style: none;
+}
+.menu nav ul li{
+    height: 100%;
+    margin: 0px 20px;
+    font-size: 18px;
+}
+.menu nav ul li:hover{
+    color: #80C88B;
+}
+.menu nav ul button{
+    border: none;
+    border-radius: 20px;
+    padding:5px 20px 5px 20px;
+    height: 40px; 
+    background-color: black; 
+    color: white;
+}
+#icon-menu{
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    right: 20px;
+    top: 16px;
+    padding: 10px;
+    font-size: 20px;
+    background: white;
+    border-radius: 100%;
+    color: #787878;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+#icon-menu:hover{
+    opacity: 0.8;
+}
+/*FIN DEL HEADER*/
+.contenedor{
+    display:flex;
+    justify-content: center;
+}
+h2{
+	text-align:center;
+	color:#000;
+	font-size: 20px;
+	margin:auto;
+}
+.formulario{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.form_cont{
+    height: 350px;
+    width:100%;
+}
+#codigo,#n_art,#cantidad{
+    border:none;
+    border-radius: 20px;
+    height:44px;
+    width:300px;
+    background-color: #F7F6FB;
+    padding-left: 16px;
+    padding-right: 16px;
+}
+#seccion{
+    border:none;
+    border-radius: 20px;
+    height:44px;
+    width:300px;
+    background-color: #F7F6FB;
+    padding-left: 5px;
+    padding-right: 5px;
+}
+#enviar,#Borrar,#Ver,#imprimir{
+    margin-bottom: 5px;
+    height:44px;
+    padding-left: 30px;
+    padding-right: 30px;
+    font:bold;
+    border:none;
+    border-radius: 20px;
+    color:#80C88B;
+    background-color: #DEFFE3;
+}
+#Ver:hover{
+    background-color:#80C88B;
+    border:none;
+    color:white;
+}
+#imprimir:hover{
+    background: #80C88B;
+    border:none;
+    color:white;
+}
+#Borrar:hover{
+    background: #80C88B;
+    border:none;
+    color:white;
+}
+#enviar:hover{
+    background:#80C88B;
+    border:none;
+    color:white;
+}
+@media screen and (max-width:700px) {
+    nav ul li{
+        display: none;
+    }
+}
