@@ -1,3 +1,32 @@
+<?php
+
+	require "../back con front/datos_conexion.php";
+
+	$error = null;
+	
+	if($_SERVER["REQUEST_METHOD"] == "POST"){
+    
+		if(empty($_POST["amount"]) || empty($_POST["kind_product"] || empty($_POST["product"]))){
+			$error = "Please, complete all fields";
+            
+		}else{
+            
+			$conn
+            ->prepare("INSERT INTO listaCompras (product,kind_product,amount) VALUES(:product, :kind_product, :amount)")
+			->execute([
+				":product" => $_POST["product"],
+				":kind_product" => $_POST["kind_product"],
+				":amount" => $_POST["amount"]
+			]);
+            echo "hola";
+            
+			header("Location: show_shopping.php");
+		}
+	}
+    
+?>
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -57,27 +86,22 @@
     <div class="container-all" id="move-content">
         <div class="contenedor">
 		<h1>Lista de productos </h1>
-<form name="form1" method="get" action="insert_registros.php">
+<form name="form1" method="POST" action="form_registro.php">
   <table border="0" align="center">
     <tr>
       <td>Sección</td>
       <td><label for="SECCION"></label>
-      <input autocomplete="off"  type="text" name="tipo_producto" id="SECCION"></td>
+      <input autocomplete="off"  type="text" name="kind_product" id="kind_product"></td>
     </tr>
     <tr>
       <td>Producto</td>
       <td><label for="PRODUCTO"></label>
-      <input autocomplete="off" type="text" name="producto" id="PRODUCTO"></td>
-    </tr>
-	<tr>
-      <td>Fecha</td>
-      <td><label for="FECHA"></label>
-      <input autocomplete="off" type="text" name="FECHA" id="FECHA"></td>
+      <input autocomplete="off" type="text" name="product" id="product"></td>
     </tr>
 	<tr>
       <td>Cantidad</td>
       <td><label for="ORIGEN"></label>
-      <input autocomplete="off" type="text" name="cantidad" id="ORIGEN"></td>
+      <input autocomplete="off" type="text" name="amount" id="amount"></td>
     </tr>
 	
 	  
@@ -87,14 +111,14 @@
       <td>&nbsp;</td>
     </tr>
     <tr>
-      <td align="center"><input type="submit" name="enviar" id="enviar" value="Agregar" onclick="location='insert_registros.php'"></td>
-      <td align="center"><input type="button" name="Borrar" id="Borrar" value="Eliminar" onclick="location='form_eliminar.php'"></td>
-	  <td align="center"><input type="button" name="mostrar" id="mostrar" value="Mostrar" onclick="location='Mostrar.php'"></td>
+      <td align="center"><input type="submit" name="enviar" id="enviar" value="Agregar" onclick="location='form_registro.php'"></td>
+      <td align="center"><input type="button" name="Borrar" id="Borrar" value="Eliminar" onclick="location='#"></td>
+	  <td align="center"><input type="button" name="mostrar" id="mostrar" value="Mostrar" onclick="location='#"></td>
 	  
     </tr>
 	<td></td>
-	<td align="center"><input type="button" name="imprimir" id="imprimir" value="Imprimir" onclick="location='indexp.php'"></td>
-	 <tr>
+	<td align="center"><input type="button" name="imprimir" id="imprimir" value="Imprimir" onclick="location='#"></td>
+	<tr>
 	 
 	 </tr>
   </table>

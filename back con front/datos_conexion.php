@@ -1,6 +1,13 @@
 <?php    
-	$db_host = "sql308.epizy.com"; //DIRECCION URL
-	$db_nombre = "epiz_31347848_healthy"; // BASE DE DATOS
-	$db_usuario = "epiz_31347848"; //USUARIO DE LA BASE DE DATOS
-	$db_contra = "0PfLNGyicB8q"; //CONTRASEÑA POR DEFECTOS
+	$db_host = "localhost"; //DIRECCION URL
+	$db_nombre = "healthy2"; // BASE DE DATOS
+	$db_usuario = "root"; //USUARIO DE LA BASE DE DATOS
+	$db_contra = ""; //CONTRASEÑA POR DEFECTOS
+
+
+	try {
+	$conn = new PDO("mysql:host=$db_host;dbname=$db_nombre", $db_usuario, $db_contra);
+	} catch (PDOException $e) {
+	die("PDO Connection Error: " . $e->getMessage());
+	}
 ?>
