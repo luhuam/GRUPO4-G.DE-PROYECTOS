@@ -1,3 +1,43 @@
+<?php
+
+include 'funciones.php';
+csrf();
+
+if (isset($_POST['submit']) && !hash_equals($_SESSION['csrf'], $_POST['csrf'])) {
+  die();
+}
+
+if (isset($_POST['submit'])) {
+  $resultado = [
+    'error' => false,
+    'mensaje' => 'El producto ' . escapar($_POST['product']) . ' ha sido agregado con éxito'
+  ];
+
+  $config = include 'config.php';
+
+  try {
+    $dsn = 'mysql:host=' . $config['db']['host'] . ';dbname=' . $config['db']['name'];
+    $conexion = new PDO($dsn, $config['db']['user'], $config['db']['pass'], $config['db']['options']);
+
+    $healthy = array(
+      "id_user"   	=> 1,
+      "product" 	=> $_POST['product'],
+      "kind_product"=> $_POST['kind_product'],
+      "amount" 		=> $_POST['amount'],
+    );
+
+    $consultaSQL = "INSERT INTO inventario (id_user, product, kind_product, amount) values (:" . implode(", :", array_keys($healthy)) . ")";
+
+    $sentencia = $conexion->prepare($consultaSQL);
+    $sentencia->execute($healthy);
+
+  } catch(PDOException $error) {
+    $resultado['error'] = true;
+    $resultado['mensaje'] = $error->getMessage();
+  }
+}
+?>
+
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -101,6 +141,7 @@
 }
 /*FIN FONDO*/
 </style>
+
 <div id="icon-menu">
 <i class="fas fa-bars"></i>
 </div>
@@ -115,22 +156,37 @@
           <img src="../img/funciones/inventario.png" alt="">
           </div>
 <div class="formulario">
-<form class="form_cont" name="form1" method="get" action="inventarioRegistrar.php"> 
+<form class="form_cont" name="form1" method="post"> 
+<?php
+if (isset($resultado)) {
+  ?>
+  <div class="container mt-3">
+    <div class="row">
+      <div class="col-md-12">
+        <div class="alert alert-<?= $resultado['error'] ? 'danger' : 'success' ?>" role="alert">
+          <?= $resultado['mensaje'] ?>
+        </div>
+      </div>
+    </div>
+  </div>
+  <?php
+}
+?>  
   <table>
 	<tr>
       <td>Producto:</td>
-      <td><label for="n_art"></label>
-      <input type="text" name="n_art" id="n_art" autocomplete="off"></td>
+      <td><label for="product"></label>
+      <input type="text" name="product" id="product" autocomplete="off"></td>
     </tr>
 	<tr>
       <td>Cantidad:</td>
-      <td><label for="cantidad"></label>
-      <input type="text" name="cantidad" id="cantidad" autocomplete="off"></td>
+      <td><label for="amount"></label>
+      <input type="text" name="amount" id="amount" autocomplete="off"></td>
     </tr>
     <tr>
 	  <td>Tipo de producto:</td><td>
-	  <label for="seccion"></label>
-	  <select  name="seccion" id="seccion">
+	  <label for="kind_product"></label>
+	  <select  name="kind_product" id="kind_product">
 	  <option selected>Escoja una opción</option>
 	  <option value="Carnes">Carnes</option>
 	  <option value="Cereales">Cereales</option>
@@ -141,18 +197,16 @@
 	  <option value="Verduras">Verduras</option>
 	  <option value="Otros">Otros</option></select>
 	</tr>
+  <input name="csrf" type="hidden" value="<?php echo escapar($_SESSION['csrf']); ?>">
     <tr>
       <td>&nbsp;</td>
       <td>&nbsp;</td>
     </tr>
+    
     <tr>
-      <td align="center"><input type="submit" name="enviar" id="enviar" value="Registrar Datos"></td>
-      <td align="center"><input type="button" onclick="location='formulario_eliminar.php'" name="Borrar" id="Borrar" value="Eliminar Datos"></td>
-      <td align="center"><input type="button" onclick="location='ver_tabla.php'" name="Ver" id="Ver" value="Ver Lista Guardada"></td>
-	</tr>
-	<tr>
-	<td></td>	
-    <td align="center"><input type="button" onclick="location='imprimir.php'" name="Imprimir" id="imprimir" value="Imprimir Tabla Guardada"></td>
+      <td><input type="submit" name="submit" id="enviar" value="Registrar Datos"></td>
+      <td><input type="button" onclick="location='inventarioVer.php'" name="Ver" id="Ver" value="Ver Lista Guardada"></td>
+      <td><input type="button" onclick="location='imprimir.php'" name="Imprimir" id="imprimir" value="Imprimir Tabla Guardada"></td>
 	</tr>
   </table>
 </form>
