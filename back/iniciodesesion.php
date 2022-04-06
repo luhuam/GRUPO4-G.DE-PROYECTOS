@@ -56,6 +56,8 @@
                 ?>  
 
             <button OnClick="location.href='index.html'">Volver al inicio</button>
+
+            <br><br><a href="registrarcontraseña.php">¿Olvidaste tu Contraseña?</a>
            
             <p class="footer" href="index.html">¿Aún no tienes una cuenta? <a href="registrarse.php">Regístrate</a></p>
 
