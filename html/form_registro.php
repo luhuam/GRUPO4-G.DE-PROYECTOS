@@ -112,12 +112,12 @@
     </tr>
     <tr>
       <td align="center"><input type="submit" name="enviar" id="enviar" value="Agregar" onclick="location='form_registro.php'"></td>
-      <td align="center"><input type="button" name="Borrar" id="Borrar" value="Eliminar" onclick="location='#"></td>
-	  <td align="center"><input type="button" name="mostrar" id="mostrar" value="Mostrar" onclick="location='#"></td>
+      <td align="center"><input type="button" name="Borrar" id="Borrar" value="Eliminar" onclick="location='formulario_eliminar.php'"></td>
+	  <td align="center"><input type="button" name="mostrar" id="mostrar" value="Mostrar" onclick="location='show_shopping.php'"></td>
 	  
     </tr>
 	<td></td>
-	<td align="center"><input type="button" name="imprimir" id="imprimir" value="Imprimir" onclick="location='#"></td>
+	<td align="center"><input type="button" name="imprimir" id="imprimir" value="Imprimir" onclick="location='../back con front/imprimir.php'"></td>
 	<tr>
 	 
 	 </tr>

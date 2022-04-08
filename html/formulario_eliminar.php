@@ -3,14 +3,38 @@
 	$conexion=mysqli_connect('localhost','root','','healthy2');
 
  ?>
-<!DOCTYPE html>
+
+<!doctype html>
 <html>
 <head>
-	<title>MOSTRAR DATOS</title>
-	<link rel="stylesheet" href="mostrarproductos.css">
+<meta charset="utf-8">
+<title>ELIMINAR ARTICULO</title>
+<link rel="stylesheet" href="eliminararticulo.css">
 </head>
-
 <body>
+
+<h1>ELIMINAR ARTÍCULO</h1>
+<form name="form1" method="get" action="../back con front/eliminar_registros.php">
+  <table border="0" align="center">
+	
+	<tr>
+      <td>Código</td>
+      <td><label for="codigo"></label>
+      <input type="text" name="codigo" id="codigo" autocomplete="off"></td>
+    </tr>
+	  
+    <tr>
+      <td>&nbsp;</td>
+      <td>&nbsp;</td>
+    </tr>
+	
+    <tr>
+      <td align="center"><input type="submit" name="enviar" id="enviar" value="Eliminar Artículo"  ></td>
+      <td align="center"><input type="button" onclick="location='form_registro.php'" name="Borrar" id="Borrar" value="Atrás"></td>
+    </tr>
+	
+  </table>
+</form>
 
 <br>
 
@@ -53,7 +77,5 @@
     </tr>
      
 	</table>
-    
-    
 </body>
 </html>
