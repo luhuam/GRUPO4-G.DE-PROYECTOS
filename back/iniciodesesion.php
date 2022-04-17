@@ -43,6 +43,7 @@
                         
                         $_SESSION['sess_user']=$correo;  
                         echo "Usted ha iniciado sesión";  
+                        header('Location: index2.0.html');
                       
                     }  
                 } else {  
