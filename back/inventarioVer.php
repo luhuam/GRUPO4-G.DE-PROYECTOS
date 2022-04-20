@@ -42,7 +42,6 @@ try {
       <table class="table">
         <thead>
           <tr>
-            <th>#</th>
             <th>Producto</th>
             <th>Tipo de producto</th>
             <th>Cantidad</th>
@@ -55,7 +54,6 @@ try {
             foreach ($healthy as $fila) {
               ?>
               <tr>
-                <td><?php echo escapar($fila["id_inventory"]); ?></td>
                 <td><?php echo escapar($fila["product"]); ?></td>
                 <td><?php echo escapar($fila["kind_product"]); ?></td>
                 <td><?php echo escapar($fila["amount"]); ?></td>

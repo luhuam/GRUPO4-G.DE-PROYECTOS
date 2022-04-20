@@ -206,7 +206,7 @@ if (isset($resultado)) {
     <tr>
       <td><input type="submit" name="submit" id="enviar" value="Registrar Datos"></td>
       <td><input type="button" onclick="location='inventarioVer.php'" name="Ver" id="Ver" value="Ver Lista Guardada"></td>
-      <td><input type="button" onclick="location='imprimir.php'" name="Imprimir" id="imprimir" value="Imprimir Tabla Guardada"></td>
+      <td><input type="button" onclick="location='inventarioImprimir.php'" name="Imprimir" id="imprimir" value="Imprimir Tabla Guardada"></td>
 	</tr>
   </table>
 </form>
