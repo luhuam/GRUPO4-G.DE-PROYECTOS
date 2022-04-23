@@ -1,0 +1,331 @@
+@charset "utf-8";
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
+*{
+	padding: 0px;
+	margin:0px;
+	box-sizing: border-box;
+    font-family: "Poppins" , sans-serif;
+}
+body {
+  height: 100%;
+  padding: 0;
+  border: 0;
+  background: white;
+}
+/*HEADER*/
+header{
+    position: fixed;
+    margin: auto;
+    width: 100%;
+    height: 80px;
+    background: white;
+    border:none;
+    z-index: 2;
+}
+.header-content{
+    max-width: 1200px;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    height: 100%;
+}
+.menu{
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+nav{
+    width:92%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.menu nav ul{
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    list-style: none;
+}
+.menu nav ul li{
+    height: 100%;
+    margin: 0px 20px;
+    font-size: 18px;
+}
+.menu nav ul li:hover{
+    color: #80C88B;
+}
+.menu nav ul button{
+    border: none;
+    border-radius: 20px;
+    padding:5px 20px 5px 20px;
+    height: 40px; 
+    background-color: black; 
+    color: white;
+}
+#icon-menu{
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    right: 20px;
+    top: 16px;
+    padding: 10px;
+    font-size: 20px;
+    background: white;
+    border-radius: 100%;
+    color: #787878;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+#icon-menu:hover{
+    opacity: 0.8;
+}
+/*FIN HEADER*/
+/*TITULO*/
+.titulo{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 200px;
+}
+.titulo h1{
+    padding-top: 100px;
+    font-size: 30px;
+}
+.titulo img{
+    padding-top: 80px;
+}
+/*FIN DE TITULO*/
+/*PORTADA*/
+.portada{
+    width: 80%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin: auto;
+}
+.portada img{
+    position: relative;
+    height: auto;
+    width: 50%;
+    pointer-events: none;
+}
+.portada p{
+    font-size: 18px;
+    width: 80%;
+    display: flex;
+    margin: auto;
+    justify-content: center;
+    align-items: center;
+}
+/*FIN DE LA PORTADA*/
+/*TIPO DE CUERPO*/
+.titulo2{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 20px;
+    font-weight: 600;
+    color: #80C88B;
+    margin-top: 20px;
+    margin-bottom: 0px;
+}
+.cuerpo{
+    padding-left: 20px;
+    padding-right: 20px;
+    height: 600px;
+    width:100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.c_cont{
+    width: 70%;
+    height:100%;
+    margin:auto;
+    display:flex;
+	justify-content: flex-start;
+	align-items: center;
+    flex-direction: column;
+    padding: 20px;
+}
+.c_cont a{
+    color: #80C88B;
+    height: 60px;
+    width: 220px;
+    border: 1px solid #80C88B;
+    border-radius: 20px;
+    font-size: 20px;
+    font-weight: 600;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+}
+.c_info{
+    width: 100%;
+    border:1px solid #80C88B;
+    border-radius: 20px;
+    padding: 20px;
+    text-align: justify;
+}
+/*FIN DE TIPO DE CUERPO*/
+/*CALCULADORA*/
+
+.calculadora{
+    width: 70%;
+    height:100%;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    margin:auto;
+    display:flex;
+	justify-content: center;
+	align-items: center;
+}
+.cal_contenido{
+    color:black;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: left;
+    margin: 0;
+    text-align: left;
+    width: 100%;
+    height: 90%;
+    padding: 40px;
+    border: 1px solid #80C88B;
+    border-radius: 20px;
+    background-color: white;
+}
+.cal_contenido h1{
+    width: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#resultado{
+    font-size: 18px;
+    background: #80C88B;
+    border:none;
+    height: 40px;
+    width: 150px;
+    border-radius: 30px;
+    color: white;
+}
+.next_btn{
+    color: rgb(107, 107, 170);
+    border-radius: 20px;
+    padding: 10px;
+}
+/*fin calculadora*/
+/*FOOTER*/
+footer{
+    padding: 20px;
+    height: 200px;
+    background-color: #DEFFE3;
+    margin:auto;
+    display:flex;
+	justify-content: center;
+	align-items: center;
+    flex-direction: column;
+}
+.footer_datos{
+    width: 92%;
+    display: inline-flex;
+    margin: auto;
+    justify-content: center;
+	align-items: center;
+}
+.footer_datos ul{
+    width: 60%;
+    display: inline-flex;
+    margin: auto;
+    justify-content: center;
+	align-items: center;
+    font-size: 16px;
+    font-weight: 600;
+    list-style: none;
+}
+.footer_datos li{
+    margin-left: 40px;
+}
+.footer_redes{
+    float: right;
+}
+.footer_redes img{
+    margin-right: 10px;
+    margin-left: 10px;
+
+}
+/*FIN DEL FOOTER*/
+@media (max-width:1000px) {
+    .cuerpo{
+        flex-direction: column;
+        height: auto;
+    }
+}
+@media (max-width:800px) {
+    nav ul li{
+        display: none;
+    }
+    .portada{
+        width: 100%;
+        flex-direction: column;
+    }
+    .portada p{
+        font-size: 14px;
+    }
+    .titulo{
+        height: auto;
+    }
+    .titulo h1{
+        font-size: 20px;
+    }
+    .titulo img{
+        padding-top: 90px;
+        width: 40px;
+        height: auto;
+    }
+    .cuerpo{
+        padding-left: 0;
+        padding-right: 0;
+    }
+    .calculadora{
+        width: 90%;
+    }
+    .cal_contenido{
+        padding: 20px;
+    }
+    .c_cont{
+        width: auto;
+    }
+    .c_cont a{
+        font-size: 16px;
+        height: 40px;
+    }
+    .c_info p{
+        font-size: 14px;
+    }
+    .footer_datos{
+        flex-direction: column;
+        margin: 0;
+        width: 100%;
+    }
+    .footer_datos ul{
+        width: 100%;
+        flex-direction: column;
+    }
+    .footer_datos li{
+        width: 100%;
+        margin-left: 0px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+}
