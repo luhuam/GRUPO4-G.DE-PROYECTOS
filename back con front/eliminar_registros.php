@@ -50,9 +50,9 @@
 	}else{
 		if(mysqli_affected_rows($conn)==0){
 			//echo "No existe el codigo a eliminar";
-			header("Location: ../html/formulario_eliminar.php");
+			header("Location: ../back con front/formulario_eliminar.php");
 		}else{
-			header("Location: ../html/formulario_eliminar.php");
+			header("Location: ../back con front/formulario_eliminar.php");
 			//echo "<table><br>";
 			//echo "<tr><td><u>Se elimino el artículo con código:</u></td></tr>";
 			//echo "<tr><td>-> $cod </td></tr></table>";
