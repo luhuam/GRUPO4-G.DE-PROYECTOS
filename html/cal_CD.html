@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/cal_CD.css">
+    <title>HEALTHYHOME</title>
+</head>
+<body>
+  <header>
+    <div class="header-content">
+        <div class="menu" id="show-menu">
+            <nav>
+                <p OnClick="location.href='../html/principal.html'" style="font-weight: 700; font-size: 24px;">HEALTHYHOME</p>
+                <ul style="font-weight: 500; font-size: 18px;">
+                    <li OnClick="location.href='../html/index.html'">Inicio</li>
+                    <li>Funciones</li>
+                    <li>Sobre nosotros</li>
+                </ul>
+            </nav>
+        </div>
+    </div>
+</header> 
+    <!--Portada-->
+
+    <div class="container-all" id="move-content">
+      <div class="titulo">
+        <h3><strong>Calculadoras</strong></h3>
+        <img src="../img/Calculadoras/calculadora.png" alt="">
+      </div>
+      <div class="opciones">
+        <button OnClick="location.href='cal_IMC.html'" style=" border:1px solid #80C88B; background: white;">Índice de masa corporal</button>
+        <button OnClick="location.href='cal_CD.html'" style="background:#DEFFE3; border:none ">Calorías diarias recomendadas</button>
+      </div>
+        <h2>Para un cálculo correcto necesitamos algo de informacion básica sobre ti.</h2>
+        <form class="form" id="form" onsubmit="return validateForm()">
+          <div class="filas">
+          <div class="Pasos">
+            ¿Cuál es tu género?
+            <div class="cont_genero">
+              <div class="gn">
+                <img src="../img/Calculadoras/varon.png" alt="imagen">
+                <label class="container">
+                <input type="radio" name="radio" id="m"><p class="text">Masculino</p>
+                <span class="checkmark"></span>
+                </label>
+              </div>
+              <div class="gn">
+                <img src="../img/Calculadoras/mujer.png" alt="imagen">
+                <label class="container">
+                <input type="radio" name="radio" id="f"><p class="text">Femenino</p>
+                <span class="checkmark"></span>
+                </label>
+              </div>
+           </div>
+          </div>
+          <div class="Pasos">
+            <p>¿Cuántos años tienes?</p>
+            <div class="enlinea">
+            <input type="text" class="text-input" id="age" placeholder="21" autocomplete="off" required/><p class="text"> años</p>    
+            </div>
+          </div>
+        </div>
+        
+          <div class="filas">
+            <div class="Pasos altura">
+           <p>¿Cuánto mides?</p> 
+           <div class="enlinea">
+            <input type="text" class="text-input" id="height" placeholder="160" autocomplete = "off" required><p class="text"> centímetros (cm)</p>
+           </div>
+          </div>
+          <div class="Pasos peso">
+            <p>¿Cuánto pesas?</p>
+            <div class="enlinea">
+            <input type="text" class="text-input" id="weight" placeholder="60" autocomplete = "off" required><p class="text"> kilos (kg)</p>
+            </div>
+            </div>
+        </div>
+        
+        
+          <div class="superfila">
+            <div class="nivel-actividad">
+            <p>¿Cómo de activo eres en el día?</p>
+            <div class="cont_actividad">
+              <div class=separador>
+              <div class="gn">
+                <img src="../img/Calculadoras/no-muy-activo.png" alt="imagen">
+                  <label class="container">
+                  <input type="radio" name="activity" id="a1"><p class="text">Poco o ningun ejercicio</p>
+                  <span class="checkmark"></span>
+                  </label>
+              </div>
+              <div class="gn">
+                <img src="../img/Calculadoras/normal.png" alt="imagen">
+                  <label class="container">
+                  <input type="radio" name="activity" id="a2"><p class="text">Ejercicio Ligero (1 a 3 días de la semana)</p>
+                  <span class="checkmark"></span>
+                  </label>
+              </div>
+              <div class="gn">
+                <img src="../img/Calculadoras/medianamente-activo.png" alt="imagen">
+                  <label class="container">
+                  <input type="radio" name="activity" id="a3"><p class="text">Ejercicio Moderado (3 a 5 días de la semana)</p>
+                  <span class="checkmark"></span>
+                  </label>
+              </div>
+            </div>
+            <div class=separador>
+              <div class="gn">
+                <img src="../img/Calculadoras/activo.png" alt="imagen">
+                  <label class="container">
+                  <input type="radio" name="activity" id="a4"><p class="text">Deportista (6 a 7 días de la semana)</p>
+                  <span class="checkmark"></span>
+                  </label>
+              </div>
+              <div class="gn">
+                <img src="../img/Calculadoras/muy-activo.png" alt="imagen">
+                  <label class="container">
+                  <input type="radio" name="activity" id="a5"><p class="text">Atleta (Entrenamientos mañana y tarde)</p>
+                  <span class="checkmark"></span>
+                  </label>
+              </div>
+            </div>
+            </div>
+          
+        </div>
+        </div>
+    </div>
+    <DIV class="acciones">
+      <button type="button" id="submit" style="margin-bottom: 10px;">Calcular</button>
+     <a href="cal_imc.html" style="margin-bottom: 10px;color:#80C88B">Volver a intentar</a>
+    </DIV> 
+ </form>    
+ </div>
+ 
+<script src="../js/calorias.js"></script>
+</body>
+</html>

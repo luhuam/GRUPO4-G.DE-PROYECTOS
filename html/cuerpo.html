@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/cuerpo.css">
+    <title>HEALTHYHOME</title>
+</head>
+<body>
+    <header>
+        <div class="header-content">
+            <div class="menu" id="show-menu">
+                <nav>
+                    <p OnClick="location.href='../html/index.html'" style="font-weight: 700; font-size: 24px;">HEALTHYHOME</p>
+                    <ul style="font-weight: 500; font-size: 18px;">
+                        <li OnClick="location.href='../html/principal.html'">Inicio</li>
+                        <li>Funciones</li>
+                        <li>Sobre nosotros</li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header> 
+    <div class="container-all" id="move-content">
+    <div class="titulo">
+        <h1><strong>Conocer mi tipo de cuerpo</strong></h1>
+        <img src="../img/cuerpo/titulo.png" alt="">
+      </div>
+    <div class="portada">
+        <img src="../img/cuerpo/personaje.png" alt="">
+        <div>
+        <p>En esta sección podrás saber que tipo de cuerpo tienes con una sencilla calculadora. Esto te ayudará para
+             saber que tipo de ejercicios son más adecuados para ti. Los tres tipos de cuerpo son los siguientes: 
+             ectomorfo, mesomorfo y endomorfo. Puedes hacerte una idea de cómo son con esta imagen.</p>
+        </div>
+    </div>
+    <p class="titulo2">Existen 3 tipos de cuerpo...</p>
+    <div class="cuerpo">
+        <div class="c_cont">
+            <a>Ectomorfo</a>
+            <div class="c_info">
+                <p>El cuerpo ectomorfo es naturalmente delgado, tiene las caderas y hombros estrechos, poca grasa 
+                    corporal y brazos y piernas muy delgados. Los ectomorfos dicen cosas como: “Da igual cuánto coma,
+                     nunca gano peso”. No todo el mundo quiere perder peso.</p>
+            </div>
+        </div>
+        <div class="c_cont">
+            <a>Endomorfo</a>
+            <div class="c_info">
+                <p>El tipo endomorfo es más redondeado y tiene forma de pera. Tienden a acumular más grasa en todo el 
+                    cuerpo, sobre todo en piernas y brazos. Es más difícil construir músculo para el endomorfo y más
+                     fácil ganar peso. Sin embargo, como mecionamos antes, no tienes que tirarte en el sofá y echarle 
+                     la culpa a la genética. Puedes estar agradecido por el cuerpo que tienes y trabajarlo para estar 
+                     en forma y saludable: sólo te llevará algo más de tiempo y esfuerzo que para un mesomorfo.</p>
+            </div>
+        </div>
+        <div class="c_cont">
+            <a>Mesomorfo</a>
+            <div class="c_info">
+                <p>El cuerpo mesomorfo está entre el ectomorfo y el endomorfo. Son capaces de crear masa muscular 
+                    fácilmente y genéticamente son el tipo de cuerpo ideal para hacer culturismo. Tienen piernas muy 
+                    fuertes, hombros anchos y cintura estrecha. En general también tienen poca grasa.</p>
+            </div>
+        </div>
+    </div>
+    
+    <div class="calculadora">
+        <div class="cal_contenido">
+            <h1><strong style="color:#80C88B; font-size:20px;">Hallar mi tipo de cuerpo</strong></h1>
+
+            <label><b>Mis hombros son?</b></label>
+            <div>
+            <label><input type="radio" name="hombros" value="1" checked> Más anchos que mis caderas</label><br>
+            <label><input type="radio" name="hombros" value="2"> Del mismo ancho de mis caderas</label><br>
+            <label><input type="radio" name="hombros" value="3"> Más angostos que mis caderas</label><br>
+            </div><br>
+
+            <label><b>Un par de jeans con mi talla de cintura correcta:</b></label>
+            <div>
+            <label><input type="radio" name="cintura" value="1" checked> Queda ajustado en mi trasero</label><br>
+            <label><input type="radio" name="cintura" value="2"> Se Ajusta perfectamente a mi trasero</label><br>
+            <label><input type="radio" name="cintura" value="3"> No se ajusta a mi trasero</label><br>
+            </div><br>
+
+            <label><b>Mis antebrazos lucen</b></label>
+            <div>
+            <label><input type="radio" name="antebrazos" value="1" checked> Grandes</label><br>
+            <label><input type="radio" name="antebrazos" value="2"> Promedio</label><br>
+            <label><input type="radio" name="antebrazos" value="3"> Pequeños</label><br>
+            </div><br>
+
+            <label><b>Mi cuerpo tiende a:</b></label>
+            <div>
+            <label><input type="radio" name="cuerpo" value="1" checked> Retener grasa de más</label><br>
+            <label><input type="radio" name="cuerpo" value="2"> Lucir delgado y con músculo</label><br>
+            <label><input type="radio" name="cuerpo" value="3"> Lucir simplemente delgado</label><br>
+            </div><br>
+
+            <label><b>Si intento tomar la muñeca de mi otra mano con mi dedo medio y pulgar:</b></label>
+            <div>
+            <label><input type="radio" name="muñeca" value="1" checked> El dedo medio y el pulgar no se tocan</label><br>
+            <label><input type="radio" name="muñeca" value="2"> El dedo medio y el pulgar apenas se tocan</label><br>
+            <label><input type="radio" name="muñeca" value="3"> El dedo medio y el pulgar se sobreponen</label><br>
+            </div><br>
+
+            <label><b>Con respecto a mi peso, tiendo a:</b></label>
+            <div>
+            <label><input type="radio" name="peso" value="1" checked> Ganar peso facilmente, pero se me difuculta perder</label><br>
+            <label><input type="radio" name="peso" value="2"> Puedo ganar y perder peso sin muchos problemas</label><br>
+            <label><input type="radio" name="peso" value="3"> Tengo problemas ganando peso ya sea en músculo o grasa</label><br>
+            </div><br>
+
+            <label><b>Qué rango describe de mejor manera el ancho de tus hombros?</b></label>
+            <div>
+            <label><input type="radio" name="ancho" value="1" checked> 110cm o más</label><br>
+            <label><input type="radio" name="ancho" value="2"> Entre 94cm y 110cm</label><br>
+            <label><input type="radio" name="ancho" value="3"> 94cm o menos</label><br>
+            </div><br>
+
+            <label><b>Mi cuerpo luce:</b></label>
+            <div>
+            <label><input type="radio" name="luce" value="1" checked> Redondo y suave</label><br>
+            <label><input type="radio" name="luce" value="2"> Cuadrado y fuerte</label><br>
+            <label><input type="radio" name="luce" value="3"> Largo y estrecho</label><br>
+            </div><br>
+            
+            <input type="submit" id="resultado" name="resultado" value="Ver Resultados">
+            <p   id="verResultado"></p>
+        </div>
+        
+        <script>
+            const btn = document.querySelector('#resultado');
+            btn.onclick = function () {
+                var ecto = 0;
+                var meso = 0;
+                var endo = 0;
+                const rbs = document.querySelectorAll('input');
+                for (const rb of rbs) {
+
+                    if (rb.checked) {
+                        if(rb.value == 1){
+                            ecto++;
+                        }
+                        else if(rb.value == 2){
+                            meso++;
+                        }
+                        else if(rb.value == 3){
+                            endo++;
+                        }
+                    }
+                }
+                document.getElementById('verResultado').innerHTML = "<br>Tu tipo de cuerpo es:<br><br>Endomorfo: " + ecto/8*100 + "%" + "<br>Mesomorfo: " + meso/8*100 + "%" + "<br>Endomorfo: " + endo/8*100 + "%";
+            }
+            </script>
+    </div>
+</div>
+    <footer style="color:#80C88B">
+        <div class="footer_datos">
+            <strong style="font-size:25px">HEALTHYHOME</strong>
+            <ul>
+                <li>Funciones</li>
+                <li>Sobre nosotros</li>
+                <li>Contáctanos</li>
+            </ul>
+            <div class="footer_redes" style="float: left">
+                <img src="../img/footer/facebook.svg" alt="">
+                <img src="../img/footer/instagram.svg" alt="">
+                <img src="../img/footer/twitter.svg" alt="">
+            </div>
+        </div>
+        <p>© Copyright 2022 HEALTHYHOME.pe</p>
+    </footer>
+</body>
+</html>
